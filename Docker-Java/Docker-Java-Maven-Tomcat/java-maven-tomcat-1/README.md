@@ -20,6 +20,11 @@ docker-java-sample-webapp
 - Run the image inside a container
 
 `docker container run -p 8080:8080 tomcat:1`
+`docker run --name tomcat -e TOMCAT_USERNAME=admin -e TOMCAT_PASSWORD=admin123 -p 8080:8080 tomcat:v1`
+`docker run --name tomcat \
+  -e TOMCAT_USERNAME=admin \
+  -e TOMCAT_PASSWORD=admin123 \
+  -p 8080:8080 tomcat:v1`
 
 - Go to `http://localhost:8080/docker-java-sample-webapp-1.0-SNAPSHOT?name=World` & see the app running in docker
 
