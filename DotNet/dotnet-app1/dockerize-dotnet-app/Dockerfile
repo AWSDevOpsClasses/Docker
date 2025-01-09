@@ -16,7 +16,7 @@ RUN dotnet publish 'image/learnwithjon-docker.csproj' -c Release -o /app/publish
 #Stage 3: Run
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 ENV ASPNETCORE_HTTP_PORTS=6969
-# Expose HostPort
+# Expose ONTAINER_PORT   [ docker run -p 5051:6969 --name dotnetapi dotnet-api:v1 ] [ HOST_PORT:CONTAINER_PORT ]
 EXPOSE 6969
 WORKDIR /app
 COPY --from=publish /app/publish . 
