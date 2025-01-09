@@ -8,3 +8,4 @@
 
 # docker build -t dotnet-app:v1 .
 # docker run -p 5051:6969 --name dotnetapp dotnet-app:v1
+# http://172.16.16.101:5051/weatherforecast/
